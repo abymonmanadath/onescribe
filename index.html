@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Under Construction</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      background-color: #f4f4f4;
+      padding: 50px;
+    }
+    
+    h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+      color: #333333;
+    }
+    
+    p {
+      font-size: 24px;
+      margin-bottom: 20px;
+      color: #666666;
+    }
+    
+    .construction-image {
+      margin-top: 50px;
+      max-width: 100%;
+      border-radius: 50%;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+    
+    .countdown-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+    }
+    
+    .countdown-item {
+      margin: 0 10px;
+      font-size: 36px;
+      color: #333333;
+    }
+    
+    .cta-button {
+      display: inline-block;
+      padding: 12px 30px;
+      font-size: 20px;
+      font-weight: bold;
+      text-decoration: none;
+      background-color: #FF5A5F;
+      color: #ffffff;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    
+    .cta-button:hover {
+      background-color: #FF4247;
+    }
+  </style>
+</head>
+<body>
+  <h1>Under Construction</h1>
+  <p>We're working hard to bring you an amazing website. Stay tuned!</p>
+  <img class="construction-image" src="https://example.com/cool-construction-image.jpg" alt="Under Construction">
+  <div class="countdown-container">
+    <div class="countdown-item" id="days"></div>
+    <div class="countdown-item" id="hours"></div>
+    <div class="countdown-item" id="minutes"></div>
+    <div class="countdown-item" id="seconds"></div>
+  </div>
+  <p>
+    <form id="notify-form" method="post" action="email.php">
+      <input type="email" name="email" placeholder="Your Email" required>
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="submit" class="cta-button" value="Notify Me">
+    </form>
+  </p>
+
+  <script>
+    // Set the launch date and time
+    var launchDate = new Date("2023-07-01T12:00:00Z").getTime();
+
+    // Update the countdown every 1 second
+    var countdown = setInterval(function() {
+      // Get current date and time
+      var now = new Date().getTime();
+
+      // Calculate the time remaining
+      var timeRemaining = launchDate - now;
+
+      // Calculate days, hours, minutes, and seconds
+      var days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+      // Display the countdown
+      document.getElementById("days").innerHTML = days + "d";
+      document.getElementById("hours").innerHTML = hours + "h";
+      document.getElementById("minutes").innerHTML = minutes + "m";
+      document.getElementById("seconds").innerHTML = seconds + "s";
+
+      // If the countdown ends, display a message
+      if (timeRemaining < 0) {
+        clearInterval(countdown);
+        document.getElementById("days").innerHTML = "0d";
+        document.getElementById("hours").innerHTML = "0h";
+        document.getElementById("minutes").innerHTML = "0m";
+        document.getElementById("seconds").innerHTML = "0s";
+        document.getElementById("countdown").innerHTML = "Website is live!";
+      }
+    }, 1000);
+  </script>
+</body>
+</html>
