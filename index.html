@@ -7,7 +7,16 @@
       font-family: 'Arial', sans-serif;
       text-align: center;
       padding: 50px;
-      background-color: #f4f4f4;
+      background: url("https://images.unsplash.com/photo-1625470496744-a01bf36a262f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1932&q=80") no-repeat center center fixed;
+      background-size: cover;
+    }
+    
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
     }
     
     h1 {
@@ -46,24 +55,26 @@
   </style>
 </head>
 <body>
-  <h1>Under Construction</h1>
-  <p>We're working hard to bring you an amazing website. Stay tuned!</p>
-  <div class="countdown-container">
-    <div class="countdown-item">
-      <div id="days" class="countdown-value"></div>
-      <div class="countdown-label">Days</div>
-    </div>
-    <div class="countdown-item">
-      <div id="hours" class="countdown-value"></div>
-      <div class="countdown-label">Hours</div>
-    </div>
-    <div class="countdown-item">
-      <div id="minutes" class="countdown-value"></div>
-      <div class="countdown-label">Minutes</div>
-    </div>
-    <div class="countdown-item">
-      <div id="seconds" class="countdown-value"></div>
-      <div class="countdown-label">Seconds</div>
+  <div class="container">
+    <h1>Under Construction</h1>
+    <p>We're working hard to bring you an amazing website. Stay tuned!</p>
+    <div class="countdown-container">
+      <div class="countdown-item">
+        <div id="days" class="countdown-value"></div>
+        <div class="countdown-label">Days</div>
+      </div>
+      <div class="countdown-item">
+        <div id="hours" class="countdown-value"></div>
+        <div class="countdown-label">Hours</div>
+      </div>
+      <div class="countdown-item">
+        <div id="minutes" class="countdown-value"></div>
+        <div class="countdown-label">Minutes</div>
+      </div>
+      <div class="countdown-item">
+        <div id="seconds" class="countdown-value"></div>
+        <div class="countdown-label">Seconds</div>
+      </div>
     </div>
   </div>
 
