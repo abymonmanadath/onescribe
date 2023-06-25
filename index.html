@@ -56,25 +56,64 @@
     .cta-button:hover {
       background-color: #FF4247;
     }
+
+    /* Beautified form fields */
+    .form-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+    }
+    
+    .form-input {
+      margin: 0 10px;
+      padding: 10px;
+      font-size: 16px;
+      border: 2px solid #666666;
+      border-radius: 5px;
+      outline: none;
+      transition: border-color 0.3s ease;
+    }
+    
+    .form-input:focus {
+      border-color: #FF5A5F;
+    }
+    
+    .form-submit {
+      margin-top: 10px;
+      padding: 10px 20px;
+      font-size: 20px;
+      font-weight: bold;
+      text-decoration: none;
+      background-color: #FF5A5F;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    
+    .form-submit:hover {
+      background-color: #FF4247;
+    }
   </style>
 </head>
 <body>
   <h1>Under Construction</h1>
   <p>We're working hard to bring you an amazing website. Stay tuned!</p>
-  <img class="construction-image" src="https://drive.google.com/file/d/17UWr43AJ4I7FzzOdHQuVvBceatahC18U/view?usp=sharing" alt="Under Construction">
+  <img class="construction-image" src="https://example.com/cool-construction-image.jpg" alt="Under Construction">
   <div class="countdown-container">
     <div class="countdown-item" id="days"></div>
     <div class="countdown-item" id="hours"></div>
     <div class="countdown-item" id="minutes"></div>
     <div class="countdown-item" id="seconds"></div>
   </div>
-  <p>
+  <div class="form-container">
     <form id="notify-form" method="post" action="email.php">
-      <input type="email" name="email" placeholder="Your Email" required>
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="submit" class="cta-button" value="Notify Me">
+      <input class="form-input" type="email" name="email" placeholder="Your Email" required>
+      <input class="form-input" type="text" name="name" placeholder="Your Name" required>
+      <input class="form-submit" type="submit" value="Notify Me">
     </form>
-  </p>
+  </div>
 
   <script>
     // Set the launch date and time
